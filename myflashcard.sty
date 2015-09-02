@@ -1,0 +1,156 @@
+%%
+%% Copyright (C) 2014 Jeffrey P. Hafner <jphafner@buffalo.edu>
+%%
+%%  This program is free software: you can redistribute it and/or modify
+%%  it under the terms of the GNU General Public License as published by
+%%  the Free Software Foundation, either version 3 of the License, or
+%%  (at your option) any later version.
+%%
+%%  This program is distributed in the hope that it will be useful,
+%%  but WITHOUT ANY WARRANTY; without even the implied warranty of
+%%  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%%  GNU General Public License for more details.
+%%
+%%  You should have received a copy of the GNU General Public License
+%%  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+%%
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{myflashcard}
+
+%%---------------------------------------------
+%% Margin Defintions
+%%---------------------------------------------
+\newlength{\myleft}
+\setlength{\myleft}{0pt}
+\newlength{\myright}
+\setlength{\myright}{0pt}
+
+%%---------------------------------------------
+%% Packages
+%%---------------------------------------------
+\RequirePackage[shortlabels,inline]{enumitem}
+%\RequirePackage{epigraph}
+\RequirePackage{lipsum}
+\RequirePackage{longtable}
+%\RequirePackage{quotchap}
+\RequirePackage{rotating}
+%% NOTE: remove for final
+%\RequirePackage{showframe}
+\RequirePackage{tabu}
+\RequirePackage{verbatim}
+\RequirePackage{xfrac}
+
+%%Vertical spacing:
+% topsep
+% partopsep
+% parsep
+% itemsep
+
+%%Horizontal spacing:
+% leftmargin
+% rightmargin
+% listparindent
+% labelwidth
+% labelsep
+% itemindent
+
+\let\olddescription\description
+\renewcommand{\description}{
+    \olddescription
+    \setlength{\partopsep}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\itemsep}{2pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}
+
+\let\oldenumerate\enumerate
+\renewcommand{\enumerate}{
+    \oldenumerate
+    \setlength{\partopsep}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\itemsep}{2pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}
+
+\let\olditemize\itemize
+\renewcommand{\itemize}{
+    \olditemize
+    \setlength{\partopsep}{0pt}
+    \setlength{\topsep}{0pt}
+    \setlength{\itemsep}{2pt}
+    \setlength{\parskip}{0pt}
+    \setlength{\parsep}{0pt}
+}
+
+
+%% Bibliography
+%%------------------------------------------------
+
+%% Tips on Writing a Thesis in LaTeX
+%% http://www.khirevich.com/latex/bibliography/
+\RequirePackage[
+    backend=bibtex8,
+    hyperref=true,
+    url=true,
+    %isbn=false,
+    backref=true,
+    %style=custom-numeric-comp,
+    %style=phys,
+    %style=science,
+    style=numeric,
+    %citereset=chapter,
+    maxcitenames=3,
+    maxbibnames=100,
+    block=space,
+    natbib=true,
+]{biblatex}
+
+\addbibresource{Bibliography}
+
+
+%% Math and SI Units
+%%------------------------------------------------
+%\RequirePackage[fleqn]{amsmath}
+%\usepackage{amsfonts}  % conflicts with mathdesign
+%\usepackage{amssymb}   % conflicts with mathdesign
+
+\RequirePackage{siunitx}
+\sisetup{
+    output-product = \cdot,
+    quotient-mode = fraction,
+    fraction-function = \sfrac, %%\dfrac, \tfrac
+    per-mode=symbol,            %% fraction
+}
+
+\DeclareSIUnit\calorie{cal}
+\DeclareSIUnit\mile{mile}
+\DeclareSIUnit\foot{ft}
+
+
+%% Tikz/PGF Customizations
+%%---------------------------------------------
+\RequirePackage{anyfontsize}
+\RequirePackage{tikz}
+    \usetikzlibrary{arrows}
+    \usetikzlibrary{calc}
+    \usetikzlibrary{calendar,fpu}
+    \usetikzlibrary{decorations.markings}
+    \usetikzlibrary{decorations.fractals}
+    \usetikzlibrary{lindenmayersystems}
+    \usetikzlibrary{positioning}
+    \usetikzlibrary[shadings]
+    \usetikzlibrary{shadows}
+    \usetikzlibrary{shapes.geometric}
+
+
+\RequirePackage[siunitx]{circuitikz}
+\RequirePackage{pgfplots}
+\RequirePackage{pgfplots}
+    \pgfplotsset{compat=1.9}
+    \usepgfplotslibrary{groupplots,units}
+
+\pgfmathsetseed{19830523}
+
