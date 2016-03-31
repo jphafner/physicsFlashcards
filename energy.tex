@@ -1,0 +1,67 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcard}
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+\begin{document}
+\cardfrontfoot{energy}
+
+
+%% Section: Copryright
+%%------------------------------
+\begin{flashcard}[Copyright \& License]{Copyright \copyright \, 2016 Jeffrey Hafner}
+\vspace{\fill}
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+\vspace{\fill}
+\flushright
+\small\url{https://creativecommons.org/licenses/by/4.0/}
+\end{flashcard}
+
+
+%% Section: Definitions
+%%------------------------------
+\begin{flashcard}[Definition]{Position}
+\begin{minipage}{0.6\linewidth}
+
+    \vspace{\baselineskip}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+        \draw (0,0) parabola (2,2);
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+
+%% Section: References
+%%------------------------------
+\begin{flashcard}[]{Bibliography}
+    \printbibliography[title=]
+\end{flashcard}
+
+
+\end{document}
+

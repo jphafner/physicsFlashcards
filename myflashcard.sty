@@ -18,6 +18,14 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{myflashcard}
 
+
+%%---------------------------------------------
+%% Flashcard Defintions
+%%---------------------------------------------
+\cardfrontstyle[\Large\slshape]{headings}
+\cardbackstyle{empty}
+
+
 %%---------------------------------------------
 %% Margin Defintions
 %%---------------------------------------------
@@ -31,10 +39,13 @@
 %%---------------------------------------------
 \RequirePackage[shortlabels,inline]{enumitem}
 %\RequirePackage{epigraph}
+\RequirePackage{booktabs}
 \RequirePackage{lipsum}
 \RequirePackage{longtable}
+\RequirePackage{multirow}
+%\RequirePackage{luaextra}
 %\RequirePackage{quotchap}
-\RequirePackage{rotating}
+%\RequirePackage{rotating}
 %% NOTE: remove for final
 %\RequirePackage{showframe}
 \RequirePackage{tabu}
@@ -85,6 +96,28 @@
     \setlength{\parsep}{0pt}
 }
 
+%% Fonts
+%%------------------------------------------------
+\RequirePackage{fontspec}
+\defaultfontfeatures{
+    Ligatures=TeX,
+}
+\setmainfont{STIX}
+\setsansfont{STIX}
+\setmonofont{STIX}
+
+\RequirePackage{unicode-math}
+\unimathsetup{
+    bold-style=ISO,
+}
+%\setmathfont{STIXMath}
+
+\RequirePackage{polyglossia}
+    \setmainlanguage{english}
+
+%% Must be loaded after fonts
+\RequirePackage{microtype}
+
 
 %% Bibliography
 %%------------------------------------------------
@@ -96,11 +129,11 @@
     hyperref=true,
     url=true,
     %isbn=false,
-    backref=true,
+    backref=false,
     %style=custom-numeric-comp,
-    %style=phys,
+    style=phys,
     %style=science,
-    style=numeric,
+    %style=numeric,
     %citereset=chapter,
     maxcitenames=3,
     maxbibnames=100,
@@ -108,12 +141,13 @@
     natbib=true,
 ]{biblatex}
 
-\addbibresource{Bibliography}
+\defbibheading{bibliography}[\refname]{}
+\addbibresource{myBibliography}
 
 
 %% Math and SI Units
 %%------------------------------------------------
-%\RequirePackage[fleqn]{amsmath}
+\RequirePackage[fleqn]{amsmath}
 %\usepackage{amsfonts}  % conflicts with mathdesign
 %\usepackage{amssymb}   % conflicts with mathdesign
 
@@ -129,10 +163,15 @@
 \DeclareSIUnit\mile{mile}
 \DeclareSIUnit\foot{ft}
 
+\DeclareSIPrePower\quartic{4}
+\DeclareSIPostPower\tothefourth{4}
+\DeclareSIPrePower\quintic{5}
+\DeclareSIPostPower\tothefifth{5}
+
 
 %% Tikz/PGF Customizations
 %%---------------------------------------------
-\RequirePackage{anyfontsize}
+%\RequirePackage{anyfontsize}
 \RequirePackage{tikz}
     \usetikzlibrary{arrows}
     \usetikzlibrary{calc}
@@ -141,10 +180,10 @@
     \usetikzlibrary{decorations.fractals}
     \usetikzlibrary{lindenmayersystems}
     \usetikzlibrary{positioning}
+    \usetikzlibrary{patterns}
     \usetikzlibrary[shadings]
     \usetikzlibrary{shadows}
     \usetikzlibrary{shapes.geometric}
-
 
 \RequirePackage[siunitx]{circuitikz}
 \RequirePackage{pgfplots}
@@ -153,4 +192,8 @@
     \usepgfplotslibrary{groupplots,units}
 
 \pgfmathsetseed{19830523}
+
+
+\endinput
+
 

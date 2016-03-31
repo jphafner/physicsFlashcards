@@ -1,0 +1,59 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcards}
+
+
+%% headings, empty, plain
+\cardfrontstyle[\Large\slshape]{headings}
+\cardbackstyle{empty}
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+\begin{document}
+\cardfrontfoot{Vectors}
+
+%% Basic
+
+\begin{flashcard}[Definition]{What two quantities comprise a vector?}
+    Magnitude and direction
+\end{flashcard}
+
+\begin{flashcard}[Definition]{What do you do with any vector that is not on either the $x$ or $y$ axis}
+    Magnitude and direction
+\end{flashcard}
+
+%% Advanced
+
+\begin{flashcard}[Definition]{Dot product of two vectors: $a\cdot b = \ldots$}
+    \begin{align*}
+        a\cdot b &= a b \cos\theta
+        a\cdot b &= a_x b_x + a_y b_y + a_z b_z
+    \end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Cross product of two vectors: $a\times b = \ldots$}
+    \begin{align*}
+        a \times b &= a b \sin\theta
+    \end{align*}
+\end{flashcard}
+
+\end{document}
+

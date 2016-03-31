@@ -1,0 +1,376 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcard}
+
+%% headings, empty, plain
+\cardfrontstyle[\Large\slshape]{headings}
+\cardbackstyle{empty}
+
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+%% Useful links
+%% http://www.nist.gov/itl/sed/gsg/uncertainty.cfm
+
+
+\begin{document}
+\cardfrontfoot{Metrology}
+
+%% Metrology: BIPM: Guide to the expression of uncertainty in measurement
+%% Annex B: General metrological terms
+
+\begin{flashcard}[Definition]{(measureable) quantity}
+\vspace{\fill}
+    attribute of a phenomenon, body or substance that may be distinguished qualitatively and determined quantitatively
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{value \\ (of a quantity)}
+\vspace{\fill}
+    magnitude of a particular quantity generally expressed as a unit of measurement multiplied by a number
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{true value \\ (of a quantity)}
+\vspace{\fill}
+    value consistent with the definition of a given particular quantity
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{conventional true value \\ (of a quantity)}
+\vspace{\fill}
+    value attributed to a particular quantity and accepted, sometimes by convention, as having an uncertainty appropriate for a given purpose
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{measurement}
+\vspace{\fill}
+    set of operations having the object of determining a value of a quantity
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{method of measurement}
+\vspace{\fill}
+    logical sequence of operations, described generically, used in the performance of measurements
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{measurement procedure}
+\vspace{\fill}
+    set of operations, described specifically, used in the performance of particular measurements according to a given method
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{measurand}
+\vspace{\fill}
+    particular quantity subject to measurement
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{result of a measurement}
+\vspace{\fill}
+    value attributed to a measurand, obtained by measurement
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{uncorrected result}
+\vspace{\fill}
+    result of a measurement before correction for systematic error
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{accuracy of measurement}
+\vspace{\fill}
+    closeness of the agreement between the result of a measurement and a true value of the measurand
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{repeatability \\ (of results of measurements)}
+\vspace{\fill}
+    closeness of the agreement between the results of successive measurements of the same measurand carried out under the same conditions of measurement
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{reproducibility \\ (of results of measurements)}
+\vspace{\fill}
+    closeness of the agreement between the results of measurements of the same measurand carried out under changed conditions of measurement
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{experimental standard deviation}
+\vspace{\fill}
+    for a series of n measurements of the same measurand, the quantity $s(q_k)$ characterizing the dispersion of the results and given by the formula:
+    \begin{equation*}
+        s(q_k) = \sqrt{ \frac{1}{n-1} \sum_{j=1}^{n} \left( q_{ij} - \bar{q} \right)^2 }
+    \end{equation*}
+    $q_k$ being the result of the $k$th measurement and $q$ being the arithmetic mean of the $n$ results considered
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{uncertainty \\ (of measurement)}
+\vspace{\fill}
+    parameter, associated with the result of a measurement, that characterizes the dispersion of the values that could reasonably be attributed to the measurand
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{error \\ (of measurement)}
+\vspace{\fill}
+    result of a measurement minus a true value of the measurand
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{relative error}
+\vspace{\fill}
+    error of measurement divided by a true value of the measurand
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{random error}
+\vspace{\fill}
+    result of a measurement minus the mean that would result from an infinite number of measurements of the same measurand carried out under repeatability conditions
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{systematic error}
+\vspace{\fill}
+    mean that would result from an infinite number of measurements of the same measurand carried out under repeatability conditions minus a true value of the measurand
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{correction}
+\vspace{\fill}
+    value added algebraically to the uncorrected result of a measurement to compensate for systematic error
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{correction factor}
+\vspace{\fill}
+    numerical factor by which the uncorrected result of a measurement is multiplied to compensate for systematic error
+\vspace{\fill}
+\end{flashcard}
+
+%% Metrology: BIPM: Guide to the expression of uncertainty in measurement
+%% Annex C: Basic statistical terms and concepts
+
+\begin{flashcard}[Definition]{probability}
+\vspace{\fill}
+    a real number in the scale 0 to 1 attached to a random event correction factor
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{random variable, variate}
+\vspace{\fill}
+    a variable that may take any of the values of a specified set of values and with which is associated a probability distribution
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{probability distribution \\ (of a random variable)}
+\vspace{\fill}
+    a function giving the probability that a random variable takes any given value or belongs to a given set of values
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{distribution function}
+\vspace{\fill}
+    a function giving, for every value $x$,
+        the probability that the random variable $X$ be less than or equal to $x$:
+    \begin{equation*}
+        F ( x ) = Pr ( X \leq x )
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{probability density function \\ (for a continuous random variable)}
+\vspace{\fill}
+    the derivative (when it exists) of the distribution function:
+    \begin{equation*}
+        f(x) = \mathrm{d}F(x)\,\mathrm{d}x
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{probability mass function}
+\vspace{\fill}
+    a function giving, for each value $x_i$ of a discrete random variable $X$,
+        the probability $p_i$ that the random variable equals $x_i$:
+    \begin{equation*}
+        p_i = Pr( X = x_i )
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+%\begin{flashcard}[Definition]{expectation of a discrete random variable \\
+% (of a random variable or of a probability distribution), \\ expected value, mean}
+\begin{flashcard}[Definition]{expectation (expected value, mean) of a discrete random variable (probability distrubution)}
+\vspace{\fill}
+    For a discrete random variable $X$ taking the values $x_i$ with the probabilities $p_i$, the expectation, if it exists, is:
+    \begin{equation*}
+        \mu = E(X) = \sum p_i x_i
+    \end{equation*}
+    the sum being extended over all the values $x_i$ which can be taken by $X$.
+\vspace{\fill}
+\end{flashcard}
+
+%\begin{flashcard}[Definition]{expectation of a continuous random variable \\
+% (of a random variable or of a probability distribution), \\ expected value, mean}
+\begin{flashcard}[Definition]{expectation (expected value, mean) of a continuous random variable (probability distrubution)}
+\vspace{\fill}
+    For a continuous random variable $X$ having the probability density function $f(x)$, the expectation, if it exists, is:
+    \begin{equation*}
+        \mu = E(X) = x f(x)\,\mathrm{d}x
+    \end{equation*}
+    the integral being extended over the interval(s) of variation of $X$.
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{variance \\ (of a random variable or of a probability distribution)}
+\vspace{\fill}
+    the expectation of the square of the centred random variable
+    \begin{equation*}
+        \sigma^2 = V(X) = E\left\{ \left[ X-E(x) \right]^2 \right\}
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{standard deviation \\ (of a random variable or of a probability distribution)}
+\vspace{\fill}
+    the positive square root of the variance:
+    \begin{equation*}
+        \sigma = \sqrt{ V(X) }
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{central moment of order $q$}
+\vspace{\fill}
+    in a univariate distribution, the expectation of the $q$ th power of the centred random variable $(X−\mu)$:
+    \begin{equation*}
+        E \left[ \left( X - \mu \right)^q \right]
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{normal distribution, Laplace-Gauss distribution}
+\vspace{\fill}
+    the probability distribution of a continuous random variable $X$,
+        the probability density function of which is:
+    \begin{equation*}
+        f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{\frac{-1}{2}\left(\frac{x-\mu}{\sigma}\right)^2 }
+    \end{equation*}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{characteristic}
+\vspace{\fill}
+    a property which helps to identify or differentiate between items of a given population
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{population}
+\vspace{\fill}
+    the totality of items under consideration
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{arithmetic mean, average}
+\vspace{\fill}
+    the sum of values divided by the number of values
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{variance}
+\vspace{\fill}
+    a measure of dispersion, which is the sum of the squared deviations of observations from their average divided by one less than the number of observations
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{standard deviation}
+\vspace{\fill}
+    the positive square root of the variancevariance
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{central moment of order $q$}
+\vspace{\fill}
+    in a distribution of a single characteristic,
+        the arithmetic mean of the $q$th power of the difference between the observed values and their average $x$:
+    \begin{equation*}
+        \frac{1}{n} \sum_{i} \left( x_i - \bar{x} \right)^2
+    \end{equation*}
+    where $n$ is the number of observations
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{statistic}
+\vspace{\fill}
+    a function of the sample random variables
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{estimation}
+\vspace{\fill}
+    the operation of assigning, from the observations in a sample,
+        numerical values to the parameters of a distribution chosen as the statistical model of the population from which this sample is taken
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{two-sided confidence interval}
+\vspace{\fill}
+    when $T_1$ and $T_2$ are two functions of the observed values such that,
+        $\theta$ being a population parameter to be estimated,
+        the probability $Pr( T_1 \leq \theta \leq T_2 )$ is at least equal to $(1-\alpha )$
+        [where $(1-\alpha)$ is a fixed number, positive and less than 1],
+        the interval between $T_1$ and $T_2$ is a two-sided $(1-\alpha)$ confidence interval for $\theta$
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{one-sided confidence interval}
+\vspace{\fill}
+    when $T$ is a function of the observed values such that,
+        $\theta$ being a population parameter to be estimated,
+        the probability $\mathrm{Pr}( T\geq\theta )$ [or the probability $\mathrm{Pr}( T\geq\theta )$] is at least equal to $(1-\alpha)$
+        [where $(1-\alpha)$ is a fixed number, positive and less than 1],
+        the interval from the smallest possible value of $\theta$ up to $T$
+        (or the interval from $T$ up to the largest possible value of $\theta$)
+        is a one-sided $(1-\alpha)$ confidence interval for $\theta$
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{confidence coefficient, \\ confidence level}
+\vspace{\fill}
+    the value $(1-\alpha)$ of the probability associated with a confidence interval or a statistical coverage interval
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{statistical coverage interval}
+\vspace{\fill}
+    an interval for which it can be stated with a given level of confidence that it contains at least a specified proportion of the population
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{degrees of freedom}
+\vspace{\fill}
+    in general, the number of terms in a sum minus the number of constraints on the terms of the sum
+\vspace{\fill}
+\end{flashcard}
+
+\end{document}
+

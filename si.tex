@@ -1,0 +1,165 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcard}
+
+
+%% headings, empty, plain
+\cardfrontstyle[\Large\slshape]{headings}
+\cardbackstyle{empty}
+
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+%% Useful links
+%% http://www.nist.gov/itl/sed/gsg/uncertainty.cfm
+
+
+\begin{document}
+\cardfrontfoot{Syst\`{e}me International d'Unit\'{e}s}
+
+
+%% Section: Copryright
+%%------------------------------
+\begin{flashcard}[Copyright \& License]{Copyright \copyright \, 2016 Jeffrey Hafner}
+\vspace{\fill}
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+\vspace{\fill}
+\flushright
+\small\url{https://creativecommons.org/licenses/by/4.0/}
+\end{flashcard}
+
+
+%% BIPM: Guide to the expression of uncertainty in measurement
+%%------------------------------------------------------------
+\begin{flashcard}[Definitions]{Base Quantities and Dimensions}
+\vspace{\fill}\small
+\begin{center}
+\begin{tabular}{llc}
+    \toprule
+                  & \multicolumn{2}{c}{Symbol For} \\
+    Base Quantity & quantity & dimension \\
+    \midrule
+    length  & $l$, $x$, $r$              & L \\
+    mass    & $m$                        & M \\
+    time    & $t$                        & T \\
+    electric current            & $I$    & I \\
+    thermodynamic temperature   & $T$    & $\Theta$ \\
+    amount of substance         & $n$    & N \\
+    luminous intensity          & $I_v$  & J \\
+    \bottomrule
+\end{tabular}
+\end{center}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{Base SI units}
+\vspace{\fill}\small
+\begin{center}
+\begin{tabular}{llc}
+    \toprule
+                  & \multicolumn{2}{c}{SI Base Unit} \\
+    Base Quantity & Name & symbol \\
+    \midrule
+    length  & meter     & m \\
+    mass    & kilogram  & kg \\
+    time    & second    & s \\
+    electric current            & ampere    & A \\
+    thermodynamic temperature   & kelvin    & K \\
+    amount of substance         & mole      & mol \\
+    luminous intensity          & candela   & cd \\
+    \bottomrule
+\end{tabular}
+\end{center}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{Base (defined) Unit}
+\vspace{\fill}
+The SI base quantities form a set of mutually independent dimensions as required by dimensional analysis commonly employed in science and technology.
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{Derived Unit}
+\vspace{\fill}
+Other quantities, called derived units are defined in terms of the seven base units.
+Where the dimension of unit $Q$, a derived unit, can be written in the form given below
+\begin{equation*}
+    \mathrm{dim} Q = \mathrm{L}^{\alpha} \mathrm{M}^{\beta} \mathrm{T}^{\gamma} \mathrm{I}^{\delta} \Theta^{\epsilon} \mathrm{N}^{\zeta} \mathrm{J}^{\eta} \, .
+\end{equation*}
+Where $\alpha$, $\beta$, $\gamma$, $\delta$, $\epsilon$, $\zeta$ and $\eta$ are small integers.
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{meter (m)}
+\vspace{\fill}
+The meter is the length of the path travelled by light in vacuum during a time interval of 1/\num{299 792 458} of a second.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{kilogram (kg)}
+\vspace{\fill}
+The kilogram is the unit of mass; it is equal to the mass of the international prototype of the kilogram.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{second (s)}
+\vspace{\fill}
+The second is the duration of \num{9 192 631 770} periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium-133 atom.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{ampere (A)}
+\vspace{\fill}
+The ampere is that constant current which, if maintained in two straight parallel conductors of infinite length, of negligible circular cross section, and placed 1 meter apart in vacuum, would produce between these conductors a force equal to \num{2e-7} newton per meter of length.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{kelvin (K)}
+\vspace{\fill}
+The kelvin, unit of thermodynamic temperature, is the fraction 1/273.16 of the thermodynamic temperature of the triple point of water.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{mole (mol)}
+\vspace{\fill}
+\begin{enumerate} %[itemsep=1pt]
+    \item  The mole is the amount of substance of a system which contains as many elementary entities as there are atoms in 0.012 kilogram of carbon 12.
+    \item  When the mole is used, the elementary entities must be specified and may be atoms, molecules, ions, electrons, other particles, or specified groups of such particles.\cite{sp330}
+\end{enumerate}
+\vspace{\fill}
+\end{flashcard}
+
+\begin{flashcard}[Definitions]{candela (cd)}
+\vspace{\fill}
+The candela is the luminous intensity, in a given direction, of a source that emits monochromatic radiation of frequency \num{540e12} hertz and that has a radiant intensity in that direction of (1/683) watt per steradian.\cite{sp330}
+\vspace{\fill}
+\end{flashcard}
+
+
+%% Section: References
+%%------------------------------
+\begin{flashcard}[]{Bibliography}
+    \printbibliography
+\end{flashcard}
+
+
+\end{document}
+

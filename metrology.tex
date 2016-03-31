@@ -1,0 +1,312 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcard}
+
+%% headings, empty, plain
+\cardfrontstyle[\Large\slshape]{headings}
+\cardbackstyle{empty}
+
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+%% Useful links
+%% http://www.nist.gov/itl/sed/gsg/uncertainty.cfm
+
+
+\begin{document}
+\cardfrontfoot{Metrology}
+
+%% Metrology: BIPM: Guide to the expression of uncertainty in measurement
+
+\begin{flashcard}[Defintion]{(measureable) quantity}
+\hfill\vfill
+\begin{quote}
+    attribute of a phenomenon, body or substance that may be distinguished qualitatively and determined quantitatively
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{value (of a quantity)}
+\hfill\vfill
+\begin{quote}
+    magnitude of a particular quantity generally expressed as a unit of measurement multiplied by a number
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{true value (of a quantity)}
+\hfill\vfill
+\begin{quote}
+    value consistent with the definition of a given particular quantity
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{conventional true value (of a quantity)}
+\hfill\vfill
+\begin{quote}
+    value attributed to a particular quantity and accepted, sometimes by convention, as having an uncertainty appropriate for a given purpose
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{measurement}
+\hfill\vfill
+\begin{quote}
+    set of operations having the object of determining a value of a quantity
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{method of measurement}
+\hfill\vfill
+\begin{quote}
+    logical sequence of operations, described generically, used in the performance of measurements
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{measurement procedure}
+\hfill\vfill
+\begin{quote}
+    set of operations, described specifically, used in the performance of particular measurements according to a given method
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{measurand}
+\hfill\vfill
+\begin{quote}
+    particular quantity subject to measurement
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{result of a measurement}
+\hfill\vfill
+\begin{quote}
+    value attributed to a measurand, obtained by measurement
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{uncorrected result}
+\hfill\vfill
+\begin{quote}
+    result of a measurement before correction for systematic error
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{accuracy of measurement}
+\hfill\vfill
+\begin{quote}
+    closeness of the agreement between the result of a measurement and a true value of the measurand
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{repeatability (of results of measurements)}
+\hfill\vfill
+\begin{quote}
+    closeness of the agreement between the results of successive measurements of the same measurand carried out under the same conditions of measurement
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{reproducibility (of results of measurements)}
+\hfill\vfill
+\begin{quote}
+    closeness of the agreement between the results of measurements of the same measurand carried out under changed conditions of measurement
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{experimental standard deviation}
+\hfill\vfill
+\begin{quote}
+    for a series of n measurements of the same measurand, the quantity s ( q k ) characterizing the dispersion of the results and given by the formula:
+    \begin{equation}
+        s(q_k) = \sqrt{ \frac{1}{n-1} \sum_{j=1}^{n} \left( q_{ij} - \bar{q} \right)^2 }
+    \end{equation}
+    $q_k$ being the result of the $k$th measurement and $q$ being the arithmetic mean of the $n$ results considered
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{uncertainty (of measurement)}
+\hfill\vfill
+\begin{quote}
+    parameter, associated with the result of a measurement, that characterizes the dispersion of the values that could reasonably be attributed to the measurand
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{error (of measurement)}
+\hfill\vfill
+\begin{quote}
+    result of a measurement minus a true value of the measurand
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{relative error}
+\hfill\vfill
+\begin{quote}
+    error of measurement divided by a true value of the measurand
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{random error}
+\hfill\vfill
+\begin{quote}
+    result of a measurement minus the mean that would result from an infinite number of measurements of the same measurand carried out under repeatability conditions
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{systematic error}
+\hfill\vfill
+\begin{quote}
+    mean that would result from an infinite number of measurements of the same measurand carried out under repeatability conditions minus a true value of the measurand
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{correction}
+\hfill\vfill
+\begin{quote}
+    value added algebraically to the uncorrected result of a measurement to compensate for systematic error
+\end{quote}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Defintion]{correction factor}
+\hfill\vfill
+\begin{quote}
+    numerical factor by which the uncorrected result of a measurement is multiplied to compensate for systematic error
+\end{quote}
+\vfill
+\end{flashcard}
+
+
+%% Metrology: Advanced
+\begin{flashcard}[Definition]{Propagation of Uncertainties}
+\hfill
+\vfill
+\begin{align*}
+    \delta q
+    \begin{cases}
+        = \sqrt{ \left(\delta x\right)^2 + \cdots + \left(\delta z\right)^2 + \left(\delta u\right)^2 + \cdots + \left(\delta w\right)^2 } \\
+            \quad\quad\text{for independent random errors;} \\
+        \leq \delta x + \cdots + \delta z + \delta u + \cdots + \delta w \\
+            \quad\quad\text{always.} \\
+    \end{cases}
+\end{align*}
+\vfill
+\begin{flushright}
+    \footnotesize Taylor: An Introduction to Error Analysis
+\end{flushright}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Propagation of Uncertainties}
+\hfill
+\vfill
+\begin{align*}
+    \frac{\delta q}{|q|}
+    \begin{cases}
+        = \sqrt{ \left(\frac{\delta x}{x}\right)^2 + \cdots + \left(\frac{\delta z}{z}\right)^2 + \left(\frac{\delta u}{u}\right)^2 + \cdots + \left(\frac{\delta w}{w}\right)^2 } \\
+        \leq \frac{\delta x}{|x|} + \cdots + \frac{\delta z}{|z|} + \frac{\delta u}{|u|} + \cdots + \frac{\delta w}{|w|}
+    \end{cases}
+\end{align*}
+\vfill
+\begin{flushright}
+    \footnotesize Taylor: An Introduction to Error Analysis
+\end{flushright}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Expectation}
+\hfill
+\vfill
+\begin{align*}
+    \mathrm{E}[X] = \frac{1}{N} \sum_{i=1}^{N} x_i
+\end{align*}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Variance}
+\hfill
+\vfill
+\begin{align*}
+    \mathrm{Var}[X] = \mathrm{E}[X^2} - \mathrm{E}[X]^2
+\end{align*}
+or,
+\begin{align*}
+    \mathrm{Var}[X] = \sqrt{ \frac{1}{N} \sum (x_i - \bar{x} )^2 }
+\end{align*}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Standard Deviation}
+\hfill
+\vfill
+\begin{align*}
+    \mathrm{Var}[X] = \mathrm{E}[X^2} - \mathrm{E}[X]^2
+\end{align*}
+\vfill
+\end{flashcard}
+
+\begin{flashcard}[Chapter 1]{Significant Figures:  Multiplication}
+\bigskip
+\bigskip
+\begin{quote}
+When multiplying several quantities, the number of significant figures in the final answer is the same as the number of significant figures in the quantity having the lowest number of significant figures.
+The same rule applies to division.
+\end{quote}
+\hfill
+\end{flashcard}
+
+\begin{flashcard}[Chapter 1]{Significant Figures:  Addition}
+\bigskip
+\bigskip
+\begin{quote}
+When numbers are added or subtracted, the number of decimal places in the result should equal the smallest number of decimal places of any term in the sum.
+The same rule applies to subtraction.
+\end{quote}
+\hfill
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Dot product of two vectors: $a\cdot b = \ldots$}
+    \begin{align*}
+        a\cdot b &= a b \cos\theta
+        a\cdot b &= a_x b_x + a_y b_y + a_z b_z
+    \end{align*}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Cross product of two vectors: $a\times b = \ldots$}
+    \begin{align*}
+        a \times b &= a b \sin\theta
+    \end{align*}
+\end{flashcard}
+
+\end{document}
+

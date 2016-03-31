@@ -1,0 +1,560 @@
+%\documentclass[avery5388,grid]{flashcards}
+\documentclass[avery5371,grid]{flashcards}
+
+\usepackage{myflashcard}
+
+%% left, center, right
+%\cardfrontfootstyle[\small\scshape]{right}
+%\cardfrontheadstyle[\small\scshape]{left}
+\setlength{\cardmargin}{0.25in}
+\renewcommand{\cardpaper}{letterpaper}
+\renewcommand{\cardpapermode}{portrait}
+\renewcommand{\cardrows}{5}
+\renewcommand{\cardcolumns}{2}
+\setlength{\cardheight}{2.0in}
+\setlength{\cardwidth}{3.5in}
+\setlength{\topoffset}{0.50in}
+\setlength{\oddoffset}{0.75in}
+\setlength{\evenoffset}{0.75in}
+
+
+%All four commands must be defined and all five lengths must be specified.
+%If the array of cards is not centered left-to-right on the paper,
+%you should set \oddoffset to the left margin of the front and \evenoffset to the right margin of the front
+
+\begin{document}
+\cardfrontfoot{kinematics}
+
+
+%% Section: Copryright
+%%------------------------------
+\begin{flashcard}[Copyright \& License]{Copyright \copyright \, 2016 Jeffrey Hafner}
+\vspace{\fill}
+This work is licensed under a Creative Commons Attribution 4.0 International License.
+\vspace{\fill}
+\flushright
+\small\url{https://creativecommons.org/licenses/by/4.0/}
+\end{flashcard}
+
+
+%% Section: Definitions
+%%------------------------------
+\begin{flashcard}[Definition]{Position}
+\begin{minipage}{0.6\linewidth}
+    The location of a point particle along its coordinate axis.
+    It is represented as the ordinate or dependent variable in the point particle's space-time coordinate.
+
+    \vspace{\baselineskip}
+    \begin{tikzpicture}[x=\textwidth]
+        \draw[thick,<->] (0,0) -- (1,0);
+        \fill (0.75,0) circle (2pt) node[anchor=north] {$x$};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+        \draw (0,0) parabola (2,2);
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Time}
+\begin{minipage}{0.6\linewidth}
+    Time is assumed to be independent of position and to flow uniformly forward.
+    It is represented as the abscissa or independent variable in the point particle's space-time coordinate.
+
+    \vspace{\baselineskip}
+    \begin{tikzpicture}[x=\textwidth]
+        \draw[thick,->] (0,0) -- (1,0);
+        \fill (0.75,0) circle (2pt) node[anchor=north] {$t$};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+        \draw (0,0) parabola (2,2);
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Displacement}
+\begin{minipage}{0.6\linewidth}
+    The displacement $d$ is the change in position between time $t_f$ and time $t_i$.
+        and has dimension of meter (\si{\meter}).
+    \begin{displaymath}
+        \vec{d} \equiv x_{f} - x_{i}
+    \end{displaymath}
+    \begin{tikzpicture}[x=\textwidth]
+        \draw[thick,->] (0,0) -- (1,0);
+        \draw[thick,->] (0.25,0.3) -- (0.75,0.3) node[pos=0.5,anchor=south] {$\vec{d}$};
+        \fill (0.25,0) circle (2pt) node[anchor=north] {$x_i$};
+        \fill (0.75,0) circle (2pt) node[anchor=north] {$x_f$};
+    \end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+        \draw (0,0) parabola (2,2);
+        \draw[dashed] (0.75,0) -- (0.75,0.281) node[pos=0,anchor=north] {$t_i$};
+        \draw[dashed] (1.5,0) -- (1.5,1.125) node[pos=0,anchor=north] {$t_f$};
+        \draw[dashed] (0,0.281) -- (0.5,0.281) node[pos=0,anchor=east] {$x_i$};
+        \draw[dashed] (0,1.125) -- (1.5,1.125) node[pos=0,anchor=east] {$x_f$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Velocity}
+\begin{minipage}{0.6\linewidth}
+    Velocity $v$ is the rate change in position,
+        and has dimension of meter per second (\si{\meter\per\second}).
+    \begin{displaymath}
+        \vec{v} \equiv \frac{\Delta x}{\Delta t}
+    \end{displaymath}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+        \draw (0,0) -- (2,2);
+        \draw[dashed] (0.75,0.75) -- (1.5,0.75) node[pos=0.5,anchor=north] {$\Delta t$};
+        \draw[dashed] (1.5,0.75) -- (1.5,1.5) node[pos=0.5,anchor=west] {$\Delta x$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Acceleration}
+\begin{minipage}{0.6\linewidth}
+    Acceleration $a$ is the rate change in velocity,
+        and has dimension of meter per square second (\si{\meter\per\square\second}).
+    \begin{displaymath}
+        \vec{a} \equiv \frac{\Delta v}{\Delta t}
+    \end{displaymath}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$v$};
+        \draw (0,0) -- (2,2);
+        \draw[dashed] (0.75,0.75) -- (1.5,0.75) node[pos=0.5,anchor=north] {$\Delta t$};
+        \draw[dashed] (1.5,0.75) -- (1.5,1.5) node[pos=0.5,anchor=west] {$\Delta v$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\end{flashcard}
+
+%\begin{flashcard}[Definition]{Jerk}
+%\begin{minipage}{0.6\linewidth}
+%    Jerk $j$ is the rate change in acceleration
+%        and has dimension of meter per cubic second (\si{\meter\per\cubic\second}).
+%    \begin{displaymath}
+%        \vec{j} \equiv \frac{\Delta a}{\Delta t}
+%    \end{displaymath}
+%\end{minipage}
+%\begin{minipage}{0.35\linewidth}
+%    \begin{center}
+%    \begin{tikzpicture}
+%        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+%        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+%        \draw (0,0) parabola (2,2);
+%        \draw[dashed] (0.75,0) -- (0.75,0.281) node[pos=0,anchor=north] {$t_i$};
+%        \draw[dashed] (1.5,0) -- (1.5,1.125) node[pos=0,anchor=north] {$t_f$};
+%        \draw[dashed] (0,0.281) -- (0.5,0.281) node[pos=0,anchor=east] {$x_i$};
+%        \draw[dashed] (0,1.125) -- (1.5,1.125) node[pos=0,anchor=east] {$x_f$};
+%    \end{tikzpicture}
+%    \end{center}
+%\end{minipage}
+%\end{flashcard}
+%
+%\begin{flashcard}[Definition]{Jounce (also snap)}
+%\begin{minipage}{0.6\linewidth}
+%    jounce (also snap) $s$ is the rate change in jerk,
+%        and has dimension of meter per quartic second (\si{\meter\per\quartic\second}).
+%    \begin{displaymath}
+%        \vec{s} \equiv \frac{\Delta j}{\Delta t}
+%    \end{displaymath}
+%\end{minipage}
+%\begin{minipage}{0.35\linewidth}
+%    \begin{center}
+%    \begin{tikzpicture}
+%        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+%        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$x$};
+%        \draw (0,0) parabola (2,2);
+%        \draw[dashed] (0.75,0) -- (0.75,0.281) node[pos=0,anchor=north] {$t_i$};
+%        \draw[dashed] (1.5,0) -- (1.5,1.125) node[pos=0,anchor=north] {$t_f$};
+%        \draw[dashed] (0,0.281) -- (0.5,0.281) node[pos=0,anchor=east] {$x_i$};
+%        \draw[dashed] (0,1.125) -- (1.5,1.125) node[pos=0,anchor=east] {$x_f$};
+%    \end{tikzpicture}
+%    \end{center}
+%\end{minipage}
+%\end{flashcard}
+
+
+
+%% Section: Application
+%%------------------------------
+
+%% Application 1
+\begin{flashcard}[Application]{Displacement from Velocity}
+\vspace{\fill}
+\begin{minipage}{0.6\linewidth}
+    Displacement, or change in position, from time $t_i$ to time $t_f$,
+        can be calculated from the sum under a velocity curve.
+    \begin{displaymath}
+        d \equiv \Delta x = \text{area of shaded}
+    \end{displaymath}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$v$};
+        %\draw (0,0) parabola (2,2);
+        \draw (0,0) -- (2,2);
+        \draw[pattern=north east lines] (0.75,0) -- (0.75,0.75) -- (1.5,1.5) -- (1.5,0) -- cycle;
+        \draw[dashed] (0.75,0.75) -- (0,0.75) node[anchor=east] {$v_i$};
+        \draw[dashed] (1.5,1.5) -- (0,1.5) node[anchor=east] {$v_f$};
+        \draw[dashed] (0.75,0.75) -- (0.75,0) node[anchor=north] {$t_i$};
+        \draw[dashed] (1.5,1.5) -- (1.5,0) node[anchor=north] {$t_f$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\vspace{\fill}
+\end{flashcard}
+
+%% Application 1
+\begin{flashcard}[Application]{Change in Velocity from Acceleration}
+\vspace{\fill}
+\begin{minipage}{0.6\linewidth}
+    The change in velocity, from time $t_i$ to time $t_f$,
+        can be calculated from the sum under an acceleration curve.
+    \begin{displaymath}
+        \Delta v = \text{area of shaded}
+    \end{displaymath}
+\end{minipage}
+\begin{minipage}{0.35\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=north] {$t$};
+        \draw[thick,->] (0,0) -- (0,2) node[anchor=east] {$a$};
+        %\draw (0,0) parabola (2,2);
+        \draw (0,0) -- (2,2);
+        \draw[pattern=north east lines] (0.75,0) -- (0.75,0.75) -- (1.5,1.5) -- (1.5,0) -- cycle;
+        \draw[dashed] (0.75,0.75) -- (0,0.75) node[anchor=east] {$a_i$};
+        \draw[dashed] (1.5,1.5) -- (0,1.5) node[anchor=east] {$a_f$};
+        \draw[dashed] (0.75,0.75) -- (0.75,0) node[anchor=north] {$t_i$};
+        \draw[dashed] (1.5,1.5) -- (1.5,0) node[anchor=north] {$t_f$};
+    \end{tikzpicture}
+    \end{center}
+\end{minipage}
+\vspace{\fill}
+\end{flashcard}
+
+%% Equation 1
+\begin{flashcard}[Application]{The four kinematic equations}
+\vspace{\fill}
+\begin{minipage}{0.4\linewidth}
+    \begin{align*}
+        d  &= v_i t + \frac{1}{2} a t^2 \\
+        d  &= \bar{v} t \\
+        v_f^2 &= v_i^2 + 2 a d \\
+        v_f   &= v_i + a t \\
+    \end{align*}
+\end{minipage}
+\begin{minipage}{0.5\linewidth}
+    The assumption of constant acceleration is necessary
+\end{minipage}
+\vspace{\fill}
+\end{flashcard}
+
+
+%% Graph application 0
+\begin{flashcard}[Application]{
+    \vspace{-\baselineskip}
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+        \begin{scope}[xshift=0.0cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+            \draw (0,0) -- (2,2);
+        \end{scope}
+        \begin{scope}[xshift=+2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+}
+\begin{center}
+\begin{tikzpicture}
+    \begin{scope}[xshift=-2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+        \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+    \end{scope}
+    \begin{scope}[xshift=0.0cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+        \draw (0,0) -- (2,1.5);
+    \end{scope}
+    \begin{scope}[xshift=+2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+        \draw (0,1) -- (2,1);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+\end{flashcard}
+
+%% Graph application 1
+\begin{flashcard}[Application]{
+    \vspace{-\baselineskip}
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+        \begin{scope}[xshift=0.0cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+        \begin{scope}[xshift=+2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+            \draw (0,1) -- (2,1);
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+}
+\begin{center}
+\begin{tikzpicture}
+    \begin{scope}[xshift=-2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+        \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+    \end{scope}
+    \begin{scope}[xshift=0.0cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+        \draw (0,0) -- (2,1.5);
+    \end{scope}
+    \begin{scope}[xshift=+2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+        \draw (0,1) -- (2,1);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+\end{flashcard}
+
+%% Graph application 2
+\begin{flashcard}[Application]{
+    \vspace{-\baselineskip}
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+            \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+        \end{scope}
+        \begin{scope}[xshift=0.0cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+        \begin{scope}[xshift=+2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+}
+\begin{center}
+\begin{tikzpicture}
+    \begin{scope}[xshift=-2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+        \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+    \end{scope}
+    \begin{scope}[xshift=0.0cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+        \draw (0,0) -- (2,1.5);
+    \end{scope}
+    \begin{scope}[xshift=+2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+        \draw (0,1) -- (2,1);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+\end{flashcard}
+
+
+%% Graph application 3
+\begin{flashcard}[Application]{
+    \vspace{-\baselineskip}
+    \begin{center}
+    \begin{tikzpicture}
+        \begin{scope}[xshift=-2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+        \begin{scope}[xshift=0.0cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+            \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+        \end{scope}
+        \begin{scope}[xshift=+2.5cm]
+            \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+            \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+            \node[anchor=center] at (1,0.75) {\huge ?};
+        \end{scope}
+    \end{tikzpicture}
+    \end{center}
+}
+\begin{center}
+\begin{tikzpicture}
+    \begin{scope}[xshift=-2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$x$};
+        \draw (0,0) plot[domain=0:2] (\x,{0.1875*\x*\x*\x});
+    \end{scope}
+    \begin{scope}[xshift=0.0cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$v$};
+        \draw (0,0) plot[domain=0:2] (\x,{0.375*\x*\x});
+    \end{scope}
+    \begin{scope}[xshift=+2.5cm]
+        \draw[thick,->] (0,0) -- (2,0) node[anchor=west] {$t$};
+        \draw[thick,->] (0,0) -- (0,1.5) node[anchor=south] {$a$};
+        \draw (0,0) -- (2,1.5);
+    \end{scope}
+\end{tikzpicture}
+\end{center}
+\end{flashcard}
+
+
+
+
+
+\begin{comment}
+\begin{flashcard}[Definition]{Average velocity}
+\bigskip
+\bigskip
+\begin{displaymath}
+    v_{avg} \equiv \frac{\Delta x}{\Delta t} 
+\end{displaymath}
+\textbf{or} \\
+\medskip
+\begin{displaymath}
+    \textrm{Average velocity} = \frac{\textrm{change in position}}{\textrm{change in time}} = \frac{\textrm{displacement}}{\textrm{time interval}}
+\end{displaymath}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Average speed}
+\bigskip
+\bigskip
+\begin{displaymath}
+    \textrm{Average speed} = \frac{\textrm{total distance}}{\textrm{total time}}
+\end{displaymath}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Instantaneous velocity}
+\bigskip
+\bigskip
+\begin{displaymath}
+    v_{x} \equiv \lim_{\Delta t \rightarrow 0} \frac{\Delta x}{\Delta t} = \frac{dx}{dt}
+\end{displaymath}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Average acceleration}
+\bigskip
+\bigskip
+\begin{displaymath}
+    \bar{a}_{x} \equiv \frac{\Delta v_{x}}{\Delta t} = \frac{v_{xf} - v_{xi}}{t_{f} - t_{i}}
+\end{displaymath}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Instantaneous acceleration}
+\bigskip
+\bigskip
+\begin{displaymath}
+    a_{x} \equiv \lim_{\Delta t \rightarrow 0} \frac{\Delta v_{x}}{\Delta t} = \frac{dv_{x}}{dt}
+\end{displaymath}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Velocity as a function of time}
+\bigskip
+\begin{displaymath}
+    v_{xf} = v_{xi} + a_{x}t
+\end{displaymath}
+\begin{center}
+    assuming constant acceleration
+\end{center}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Position as a function of velocity and time}
+\bigskip
+\begin{displaymath}
+    x_{f} = x_{i} + \frac{1}{2}\left( v_{xi} + v_{xf}\right)t
+\end{displaymath}
+\begin{center}
+    assuming constant acceleration
+\end{center}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Position as a function of time}
+\bigskip
+\begin{displaymath}
+    x_{f} = x_{i} + v_{xi}t + \frac{1}{2}a_{x}t
+\end{displaymath}
+\begin{center}
+    assuming constant acceleration
+\end{center}
+\end{flashcard}
+
+\begin{flashcard}[Definition]{Velocity as a function of position}
+\bigskip
+\begin{displaymath}
+v_{xf}^{2} = v_{xi}^{2} + 2a_{x}\left( x_{f} - x_{i}\right) 
+\end{displaymath}
+\begin{center}
+(constant acceleration)
+\end{center}
+\end{flashcard}
+\end{comment}
+
+
+
+%% Section: References
+%%------------------------------
+\begin{flashcard}[]{Bibliography}
+    \printbibliography[title=]
+\end{flashcard}
+
+
+\end{document}
+
